@@ -30,10 +30,12 @@ namespace BL
                 //Add the new product to the system
                 itsDAL.AddProduct(p);
             }
-        public List<Product> FindProductByName(string name)
-        {
-            throw new NotImplementedException();
-        }
-   
-}
+       
+            public List<Product> FindProductByName(string name) {
+                return itsDAL.ProductNameQuery(name);
+            }
+
+       
+
+    }
 }
